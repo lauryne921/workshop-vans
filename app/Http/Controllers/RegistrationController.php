@@ -30,6 +30,6 @@ class RegistrationController extends Controller
 
         Mail::to($user->email)->send(new RegistrationMail($user));
 
-        return redirect()->back()->with('success', 'Registration successful! Please check your email for confirmation.');
+        return redirect()->back()->with('success', 'Inscription réussie ! Vérifiez vos mails pour la confirmation.');
     }
 }
