@@ -1,0 +1,14 @@
+config:
+  target: 'http://localhost:8000/register'
+  phases:
+    - duration: 60
+      arrivalRate: 10
+scenarios:
+  - flow:
+      - post:
+          url: "/register"
+          json:
+            firstname: "{{ firstName() }}"
+            lastname: "{{ lastName() }}"
+            email: "{{ email() }}"
+            newsletter: true

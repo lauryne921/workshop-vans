@@ -17,6 +17,7 @@ class RegistrationTest extends TestCase
             'firstname' => 'Peter',
             'lastname' => 'Parker',
             'email' => 'peter@example.com',
+            'newsletter' => true,
         ]);
 
         $response->assertRedirect('/register');
@@ -24,6 +25,7 @@ class RegistrationTest extends TestCase
             'firstname' => 'Peter',
             'lastname' => 'Parker',
             'email' => 'peter@example.com',
+            'newsletter' => true,
         ]);
     }
 }
