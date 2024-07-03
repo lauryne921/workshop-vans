@@ -16,6 +16,9 @@
         <h1 class="text-2xl font-bold">Inscrivez-vous à l'évènement</h1>
       </div>
 
+      <p>Inscrivez-vous à notre évènement et tentez de remporter une de nos 200 paires exclusives à ces Jeux Olympiques 2024 de Paris.</p>
+      <p>Rejoignez-nous à Place de la Concorde et rencontrez de nombreux autres passionés comme vous.</p><br>
+
       @if(session('success'))
         <div class="bg-green-100 text-green-800 p-4 mb-4 rounded">
           {{ session('success') }}
