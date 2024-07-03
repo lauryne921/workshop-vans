@@ -13,13 +13,13 @@ class RegistrationTest extends TestCase
     /** @test */
     public function a_user_can_register()
     {
-        $response = $this->post('/', [
+        $response = $this->post('/register', [
             'firstname' => 'Peter',
             'lastname' => 'Parker',
             'email' => 'peter@example.com',
         ]);
 
-        $response->assertRedirect('/');
+        $response->assertRedirect('/register');
         $this->assertDatabaseHas('users', [
             'firstname' => 'Peter',
             'lastname' => 'Parker',

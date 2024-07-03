@@ -7,5 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', [RegistrationController::class, 'show']);
-Route::post('/', [RegistrationController::class, 'register'])->name('register');
+Route::get('/register', [RegistrationController::class, 'show']);
+Route::post('/register', [RegistrationController::class, 'register'])->name('register');

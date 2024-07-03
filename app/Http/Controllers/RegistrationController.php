@@ -20,13 +20,17 @@ class RegistrationController extends Controller
             'firstname' => 'required|string|max:255',
             'lastname' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
+            'newsletter' => 'required|boolean',
         ]);
 
-        $user = User::create([
+        $validatedData = [
             'firstname' => $request->firstname,
             'lastname' => $request->lastname,
             'email' => $request->email,
-        ]);
+            'newsletter' => $request->newsletter,
+        ];
+
+        $user = User::create($validatedData);
 
         Mail::to($user->email)->send(new RegistrationMail($user));
 
