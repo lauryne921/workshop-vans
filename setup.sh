@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#-compose down -v --remove-orphans
+docker-compose down -v --remove-orphans
 
 docker-compose up -d --build
 

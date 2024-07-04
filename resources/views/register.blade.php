@@ -207,7 +207,7 @@
   </style>
 </head>
 <body>
-  <main style="overflow: hidden;">
+  <main>
     <div style="width: 100%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
       <img class="affiche" src="{{ asset('images/affiche_jo.jpg') }}" alt="Affiche de l'évènement">
     </div>
