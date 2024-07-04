@@ -17,6 +17,7 @@ services:
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
     ports:
       - "8000:80"
+      - "5173:5173"
     networks:
       - laravel-network
     depends_on:
@@ -34,7 +35,7 @@ services:
     ports:
       - "3307:3306"
     volumes:
-      - dbdata:/var/lib/mysql
+      - db_data:/var/lib/mysql
     networks:
       - laravel-network
 
@@ -55,5 +56,4 @@ networks:
     driver: bridge
 
 volumes:
-  dbdata:
-    driver: local
+  db_data:

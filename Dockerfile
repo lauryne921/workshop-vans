@@ -19,6 +19,10 @@ RUN apt-get update && apt-get install -y \
     && pecl install xdebug \
     && docker-php-ext-enable xdebug
 
+# Installer Node.js et npm
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+    && apt-get install -y nodejs
+
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 COPY apache-laravel.conf /etc/apache2/sites-available/000-default.conf

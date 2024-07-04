@@ -1,12 +1,13 @@
 module.exports = {
   content: [
-    './resources/views/register.blade.php',
+    "./resources/views/**/*.blade.php",
+    "./resources/js/**/*.js",
   ],
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
-        sans: ['Helvetica', 'Arial', 'sans-serif'],
+        montserrat: ["Montserrat", "sans-serif"],
+        sans: ["Helvetica", "Arial", "sans-serif"],
       },
     },
   },
